@@ -1,0 +1,18 @@
+yacc
+
+yacc -d gm.y
+lex gm.l
+gcc -o gm y.tab.c lex.yy.c -ll
+./gm
+
+
+
+
+lex
+flex identifier.l
+gcc -o identifier lex.yy.c -ll
+./identifier
+
+
+using file
+./identifier < input.txt

@@ -1,0 +1,22 @@
+#!/bin/bash
+
+find_greatest() {
+    echo "Enter first number:"
+    read a
+    echo "Enter second number:"
+    read b
+    echo "Enter third number:"
+    read c
+
+    if [ $a -ge $b ] && [ $a -ge $c ]; then
+        greatest=$a
+    elif [ $b -ge $a ] && [ $b -ge $c ]; then
+        greatest=$b
+    else
+        greatest=$c
+    fi
+
+    echo "The greatest number is: $greatest"
+}
+
+find_greatest
